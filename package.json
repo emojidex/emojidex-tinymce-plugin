@@ -17,13 +17,13 @@
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
     "html-webpack-plugin": "^2.26.0",
+    "url-loader": "^0.6.2",
     "webpack": "^2.2.0",
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
     "lodash": "^4.17.4",
-    "tinymce": "^4.7.5",
-    "url-loader": "^0.6.2"
+    "tinymce": "^4.7.5"
   },
   "license": "ISC"
 }

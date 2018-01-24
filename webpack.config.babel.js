@@ -1,9 +1,9 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import path from 'path'
-import webpack from 'webpack'
-import CopyWebpackPlugin from 'copy-webpack-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import path from 'path';
+import webpack from 'webpack';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
-const pluginName = 'emojidex-tinymce-plugin'
+const pluginName = 'emojidex-tinymce-plugin';
 
 module.exports = {
   entry: {
