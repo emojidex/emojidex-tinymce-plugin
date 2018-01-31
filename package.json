@@ -22,7 +22,6 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
-    "lodash": "^4.17.4",
     "tinymce": "^4.7.5"
   },
   "license": "ISC"

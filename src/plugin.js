@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import * as url from './img/icon.png';
 
 const plugin = (editor) => {
