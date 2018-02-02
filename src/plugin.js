@@ -20,6 +20,9 @@ const plugin = (editor) => {
       checkPalette(editor, e);
     }
   });
+  editor.on('init', (e) => {
+    tinymce.activeEditor.dom.loadCSS('https://cdn.emojidex.com/scripts/css/emojidex.min.css');
+  });
 
   return {
     getMetadata: () => {
