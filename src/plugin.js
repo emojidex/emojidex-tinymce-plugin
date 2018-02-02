@@ -1,15 +1,23 @@
 import * as url from './img/icon.png';
 
+const checkPalette = (editor, e) => {
+  if (typeof Palette != 'undefined') {
+    $(e.target.$el).emojidexPalette({
+      onEmojiButonnClicked: (insertString) => {
+        editor.insertContent(insertString.imageTag);
+      }
+    });
+  } else {
+    setTimeout(() => { checkPalette(editor, e) }, 1000);
+  }
+}
+
 const plugin = (editor) => {
   editor.addButton('emojidex', {
     tooltip: 'emojidex',
     image: url.default,
     onpostrender: (e) => {
-      $(e.target.$el).emojidexPalette({
-        onEmojiButonnClicked: (insertString) => {
-          editor.insertContent(insertString.imageTag)
-        }
-      });
+      checkPalette(editor, e);
     }
   });
 
