@@ -1,6 +1,10 @@
-# emojidex-tinymce-plugin
+emojidex-tinymce-plugin
+=======================
+An emojidex plugin for tinymce which enables emojidex emoji selection, input, 
+and display.
 
-## Usage
+Usage
+-----
 
 ```
 <head>
