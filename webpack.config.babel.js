@@ -7,11 +7,11 @@ const pluginName = 'emojidex-tinymce-plugin';
 
 module.exports = {
   entry: {
-    'plugin': './src/index.js',
-    'plugin.min': './src/index.js'
+    'emojidex-tinymce-plugin': './src/index.js',
+    'emojidex-tinymce-plugin.min': './src/index.js'
   },
   output: {
-    path: path.join(__dirname, '../dist', pluginName),
+    path: path.join(__dirname, './dist'),
     filename: '[name].js'
   },
   module: {
@@ -30,18 +30,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      inject: true,
-      template: './dist/index.html'
+      inject: false,
+      template: './src/index.html'
     }),
     new webpack.optimize.UglifyJsPlugin({
       include: /\.min\.js$/,
       minimize: true
-    }),
-    new CopyWebpackPlugin([
-      {
-        from: path.join('src/LICENSE'),
-        to: path.join('dist', pluginName)
-      }
-    ])
+    })
   ]
 }
