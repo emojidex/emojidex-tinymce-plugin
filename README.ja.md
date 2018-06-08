@@ -1,9 +1,10 @@
-# emojidex-tinymce-plugin
-
+emojidex-tinymce-plugin
+=======================
 emojidexのtinymce用プラグインです。
 このプラグインを導入することで、tinymceでemojidexパレットの使用ができ、簡単にemojidex絵文字を挿入することができます！
 
-## Usage
+使い方
+-----
 
 ```
 <head>
@@ -22,7 +23,7 @@ emojidexのtinymce用プラグインです。
 </head>
 ```
 
-License
+ライセンス
 =======
 emojidex and emojidex tools are licensed under the
 [emojidex Open License](https://www.emojidex.com/emojidex/emojidex_open_license).
