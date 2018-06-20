@@ -3,7 +3,7 @@ import url from './img/icon.png';
 const checkPalette = (editor, e) => {
   if (typeof Palette != 'undefined') {
     $(e.target.$el).emojidexPalette({
-      onEmojiButonnClicked: (insertString) => {
+      onEmojiButtonClicked: (insertString) => {
         editor.insertContent(insertString.imageTag);
       }
     });
