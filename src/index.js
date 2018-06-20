@@ -1,3 +1,5 @@
 import plugin from './plugin';
 
-tinymce.PluginManager.add('emojidex', plugin);
+if (tinymce) {
+  tinymce.PluginManager.add('emojidex', plugin);
+}

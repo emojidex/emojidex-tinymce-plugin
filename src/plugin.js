@@ -1,4 +1,4 @@
-import * as url from './img/icon.png';
+import url from './img/icon.png';
 
 const checkPalette = (editor, e) => {
   if (typeof Palette != 'undefined') {
@@ -12,27 +12,17 @@ const checkPalette = (editor, e) => {
   }
 }
 
-const plugin = (editor) => {
-  editor.addButton('emojidex', {
-    tooltip: 'emojidex',
-    image: url.default,
-    onpostrender: (e) => {
-      checkPalette(editor, e);
-    }
-  });
-  editor.on('init', (e) => {
-    tinymce.activeEditor.dom.loadCSS('https://cdn.emojidex.com/scripts/css/emojidex.min.css');
-  });
-
-  return {
-    getMetadata: () => {
-      return  {
-        title: 'emojidex plugin for tinymce',
-        author: 'emojidex',
-        url: 'https://www.emojidex.com'
-      };
-    }
-  };
+export default class plugin {
+  constructor(editor) {
+    editor.addButton('emojidex', {
+      tooltip: 'emojidex',
+      image: url,
+      onpostrender: (e) => {
+        checkPalette(editor, e);
+      }
+    });
+    editor.on('init', (e) => {
+      tinymce.activeEditor.dom.loadCSS('https://cdn.emojidex.com/scripts/css/emojidex.min.css');
+    });
+  }
 };
-
-export default plugin;

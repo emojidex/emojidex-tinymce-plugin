@@ -79,9 +79,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _icon = __webpack_require__(2);
 
-var url = _interopRequireWildcard(_icon);
+var _icon2 = _interopRequireDefault(_icon);
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var checkPalette = function checkPalette(editor, e) {
   if (typeof Palette != 'undefined') {
@@ -98,9 +100,11 @@ var checkPalette = function checkPalette(editor, e) {
 };
 
 var plugin = function plugin(editor) {
+  _classCallCheck(this, plugin);
+
   editor.addButton('emojidex', {
     tooltip: 'emojidex',
-    image: url.default,
+    image: _icon2.default,
     onpostrender: function onpostrender(e) {
       checkPalette(editor, e);
     }
@@ -108,19 +112,10 @@ var plugin = function plugin(editor) {
   editor.on('init', function (e) {
     tinymce.activeEditor.dom.loadCSS('https://cdn.emojidex.com/scripts/css/emojidex.min.css');
   });
-
-  return {
-    getMetadata: function getMetadata() {
-      return {
-        title: 'emojidex plugin for tinymce',
-        author: 'emojidex',
-        url: 'https://www.emojidex.com'
-      };
-    }
-  };
 };
 
 exports.default = plugin;
+;
 
 /***/ }),
 /* 1 */
@@ -135,7 +130,9 @@ var _plugin2 = _interopRequireDefault(_plugin);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-tinymce.PluginManager.add('emojidex', _plugin2.default);
+if (tinymce) {
+  tinymce.PluginManager.add('emojidex', _plugin2.default);
+}
 
 /***/ }),
 /* 2 */

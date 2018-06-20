@@ -1,6 +1,6 @@
 {
   "name": "emojidex-tinymce-plugin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "emojidex plugin for tinymce",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.babel.js --progress --open --inline",
